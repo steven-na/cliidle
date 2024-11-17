@@ -3,8 +3,8 @@
 import time
 from threading import Thread
 
-from display import display_main
-from simulation import simulation_main
+from display.main import display_main
+from simulation.main import simulation_main
 
 if __name__ == "__main__":
     data = {'progress': 0.0, 'loopcount': 0, 'test_val': 0, 'fps': 0}

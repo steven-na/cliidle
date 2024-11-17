@@ -1,10 +1,7 @@
 # Python and curses CLI game
-
 ---
-
 **_todo:_**
-
-- simplify loop
-- separate simulation and display
-- make loop stuff separate from simulation (so i can use it for display as well)
+- First iterations of time passing in-game (make jobs that can progress)
+- Make display good
+- Implement game stuff like player stats
 - Make the game

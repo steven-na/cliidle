@@ -1,12 +1,19 @@
 """Main file"""
 
+import time
+from threading import Thread
 
-# from loading_bar import make_progress_bar_string
+from display import display_main
 from simulation import simulation_main
 
 if __name__ == "__main__":
+    data = {'progress': 0.0, 'loopcount': 0, 'test_val': 0, 'fps': 0}
+    disp_thread = Thread(target=display_main, args=(data,), daemon=True)
+    disp_thread.start()
 
-    simulation_main()
-    # for i in range(1, 1001):
-    #     print(make_progress_bar_string(i/10, 100, True))
-    #     time.sleep(.01)
+    sim_thread = Thread(target=simulation_main, args=(data,), daemon=True)
+    sim_thread.start()
+    while (True):
+        print(data)
+        data['test_val'] = data['test_val'] + 1
+        time.sleep(.05)

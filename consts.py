@@ -1,1 +1,1 @@
-PROGRESS_BAR_TEXT = ["▒", "░"]
+PROGRESS_BAR_TEXT = ["█", "▊", "▎"]
